@@ -16,11 +16,25 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 # Use tina.forward() and tina.left() to draw a pentagon
 # Make each side of the pentagon a different color with 
 # tina.pencolor()
+tina.pencolor("orange")
+tina.forward (100)
+tina.left(72)
+tina.pencolor("red")
+tina.forward (100)
+tina.left (72)
+tina.pencolor("blue")
+tina.forward (100)
+tina.left(72)
+tina.pencolor("green")
+tina.forward (100)
+tina.left (72)
+tina.pencolor("pink")
+tina.forward (100)
+tina.left (72)
 
 
-tina.forward (100)
-tina.left (120)
-tina.forward (100)
-tina.right(60)
+
+
+
               
 turtle.exitonclick()                    # Close the window when we click on it
