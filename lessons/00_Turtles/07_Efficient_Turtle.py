@@ -24,7 +24,7 @@ def draw_polygon(sides):
         ...                              # Turn tina left by the left turn
 
 
-draw_polygon(...)                        # Draw a square
+draw_polygon(4)                        # Draw a square
 
 ...                                      # Move tina to another spot on the screen
 
