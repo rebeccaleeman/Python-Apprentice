@@ -19,6 +19,7 @@ t = turtle.Turtle()
 
 
 def set_turtle_image(turtle, image_name):
+
  
     from pathlib import Path
     image_dir = Path(__file__).parent / "images"
@@ -27,7 +28,14 @@ def set_turtle_image(turtle, image_name):
     screen = turtle.getscreen()
     screen.addshape(image_path)
     turtle.shape(image_path)
+t.pencolor ("blue")
+t.pendown()
 set_turtle_image(t,"leaguebot_bolt.gif")
+t.turtlesize(stretch_wid=10, stretch_len=10, outline=10)
 
-t.turtlesize(stretch_wid=10, stretch_len=10, outline=4) # Make the turtle really big
-t.penup()
+
+turtle.exitonclick()
+
+
+
+ 
