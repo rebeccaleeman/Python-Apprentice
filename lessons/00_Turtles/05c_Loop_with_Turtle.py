@@ -16,9 +16,9 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
 tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
 
-for i in range (5):
+
     tina.forward (100)
-    tina.left(72)
+    tina.left(72)for i in range (5):
 
     
 turtle.exitonclick()       
