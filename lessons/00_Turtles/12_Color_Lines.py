@@ -17,11 +17,17 @@ tina.speed(2)                           # Make the turtle move as fast, but not 
 colors = [ 'red', 'blue', 'black', 'orange']    # define a list of colors
 
 for color in colors:                            # loop through the colors
-    ... # Your code here
+    
+    tina.pencolor (color)
+    tina.forward (50)
+    tina.right (90)
+ 
+for color in reversed (colors):
+    
+    tina.pencolor (color)
+    tina.forward (50)
+    tina.right (90)
 
-
-# 2) Make another square, but put the colors in reverse order, using a negative index. 
-
-... # Your code here
-
+    
 tina.done()
+
