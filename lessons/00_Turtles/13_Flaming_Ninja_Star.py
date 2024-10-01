@@ -40,7 +40,7 @@ for i in range(25):
    
     t.begin_fill()
 
-    t.forward( 64) 
+    t.forward(64) 
 
     t.left(60) 
 
