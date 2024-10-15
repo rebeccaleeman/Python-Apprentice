@@ -13,6 +13,8 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup (width=600, height=600)    # Set the size of the window
 
 tina = turtle.Turtle() 
+tina.speed (20)
+tina.hideturtle()
 def drawolive(x,y):
     tina.penup()
     tina.goto(x,y)
@@ -20,7 +22,37 @@ def drawolive(x,y):
     tina.color("#1c1f1d")
     tina.circle(14)
     tina.end_fill()
-   
+    tina.penup()
+    tina.goto(x,y+6)
+    tina.pendown()
+    tina.begin_fill()
+    tina.color ("#e8e097")
+    tina.circle(7)
+    tina.end_fill()
+
+def drawsquare (color, x, y, size):
+    tina.penup()
+    tina.goto (x,y)
+    tina.pendown()
+    tina.begin_fill()
+    tina.color (color)
+    tina.seth(0)
+    for i in range (4):
+        tina.forward(size)
+        tina.right (90)
+    tina.end_fill()
+    tina.penup()
+
+for i in range(300,-240,-120):
+    for j in range (-300, 240,120):
+        drawsquare("red",j, i, 60)
+
+def drawpepper(x,y):
+    drawsquare("yellow",x,y,17)
+
+
+
+
 
 tina.penup()
 # Use tina.forward() and tina.left() to draw a triangle
@@ -62,6 +94,18 @@ tina.end_fill()
 
 drawolive(0,0)
 drawolive(40,45)
+drawolive(90,90)
+drawolive (-90,90)
+drawolive(0,-100)
+drawolive(30,-80)
+drawolive(70,60)
 
 
-turtle.exitonclick()                    # Close the window when we click on it
+
+
+screen=turtle.Screen()
+turtle.onscreenclick(drawpepper)
+
+screen.mainloop()
+
+turtle.done()                   # Close the window when we click on it
