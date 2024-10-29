@@ -43,11 +43,18 @@ def drawsquare (color, x, y, size):
     tina.end_fill()
     tina.penup()
 
-for i in range(300,-240,-120):
-    for j in range (-300, 240,120):
-        drawsquare("red",j, i, 60)
+redorwhite=0
 
+for i in range(300,-240,-60):
+    for j in range (-300, 240,60):
+        if redorwhite==0:
+            drawsquare("red",j, i, 60)
+        else:
+            drawsquare("white",j,i,60)
+        redorwhite=redorwhite+1
+        redorwhite%=2
 def drawpepper(x,y):
+    print(x,y)
     drawsquare("yellow",x,y,17)
 
 
@@ -58,11 +65,20 @@ tina.penup()
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
-tina.speed(7)
 
+tina.speed(10)
+tina.pencolor("gray")
+tina.goto(0,-170)
+tina.begin_fill()
+tina.fillcolor("white")
+tina.pendown()
+tina.circle(200)
+tina.end_fill()
 
+tina.penup()
 tina.goto(-150,150)
 tina.begin_fill()
+tina.pendown()
 tina.color("#a63c16")
 tina.pendown()
 
@@ -97,8 +113,14 @@ drawolive(40,45)
 drawolive(90,90)
 drawolive (-90,90)
 drawolive(0,-100)
-drawolive(30,-80)
-drawolive(70,60)
+drawolive(-6,100)
+drawolive(48,14)
+drawolive(-41,65)
+drawolive(-63,19)
+drawolive(26,-30)
+drawolive(-31,-40)
+drawolive(77,65)
+drawolive(-5,67)
 
 
 
