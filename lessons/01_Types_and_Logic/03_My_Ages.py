@@ -42,6 +42,12 @@ if age>=0 and age<=2:
     messagebox.showinfo('What you are', "You are a baby.")
 elif age<6:
     messagebox.showinfo('What you are', "You are a toddler.")
+elif age<12:
+    messagebox.showinfo('What you are', "You are a child.")
+elif age<19:
+    messagebox.showinfo('What you are', "You are a teen.")
+elif age<64:
+    messagebox.showinfo('What you are', "You are a adult.")
 else:
    messagebox.showinfo('What you are', "You are a senior.") 
 # Use if statements to determine the age group
