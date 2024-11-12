@@ -22,16 +22,36 @@ you can ask for a string with simpledialog.askstring().
 """
 
 # Import the required modules
+from tkinter import messagebox, simpledialog, Tk
 
-# Create a window object
+window = Tk()
 
-# Hide the window, hint: use the withdraw method
+window.withdraw()
+ 
+numberone = simpledialog.askinteger("Number", "What is the first number")
 
-# Ask the user for the first number   
+numbertwo= simpledialog.askinteger("Number", "What is the second number") 
 
-# Ask the user for the second number
+operation=simpledialog.askstring("Operation", "Which operation? multiply,divide,add,subtract")
+if operation=="add":
+   sum=numberone+numbertwo
+   messagebox.showinfo('Adder', "the sum is " + str(sum))   
 
-# Ask the user for the math operation
+elif operation=="subtract":
+   difference=numberone-numbertwo
+   messagebox.showinfo('Subtracter', "the difference is " + str(difference))   
+
+elif operation=="multiply":
+   product=numberone*numbertwo
+   messagebox.showinfo('Multiplier', "the product is " + str(product))   
+
+elif operation=="divide": 
+   quotient=numberone/numbertwo
+   messagebox.showinfo('Divider', "the quotient is " + str(quotient))   
+
+else:
+   messagebox.showerror("You have entered an unsupported operation")
+
 
 # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
 
